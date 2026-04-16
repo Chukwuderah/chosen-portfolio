@@ -78,17 +78,34 @@ export function AboutSection() {
               Data Scientist & Machine Learning Enthusiast
             </h3>
             <p className="text-gray-300 text-lg leading-relaxed">
-              I'm passionate about extracting meaningful insights from complex
-              datasets and building predictive models that drive business
-              decisions. With expertise in statistical analysis, machine
-              learning, and data visualization, I transform raw data into
-              strategic assets.
+              I&apos;m a data scientist focused on building predictive systems
+              that help people make better decisions with data.
+              <span className=" block mt-2">
+                My work sits at the intersection of machine learning, analytics,
+                and decision intelligence, transforming raw data into tools that
+                can forecast outcomes, identify risks, and support smarter
+                strategies. Rather than stopping at analysis, I focus on
+                developing end-to-end solutions: from data exploration and
+                feature engineering to model development and interactive
+                applications.
+              </span>
             </p>
             <p className="text-gray-300 text-lg leading-relaxed">
-              My approach combines rigorous analytical thinking with creative
-              problem-solving, leveraging cutting-edge technologies to tackle
-              real-world challenges. From exploratory data analysis to deploying
-              production-ready ML models, I deliver end-to-end data solutions.
+              I work primarily with{" "}
+              <strong>
+                Python, pandas, scikit-learn, and modern data tools
+              </strong>{" "}
+              to design predictive models and analytical systems that address
+              real-world problems. My projects often involve building models
+              that estimate probabilities, rank alternatives, and surface
+              insights that organizations can act on.
+              <span className="block mt-2">
+                Beyond modeling, I believe that data science is only valuable
+                when insights are clearly communicated and usable. Because of
+                this, I place strong emphasis on documentation, explainability,
+                and building interfaces that allow non-technical users to
+                interact with data-driven systems.
+              </span>
             </p>
 
             {/* Skills badges */}

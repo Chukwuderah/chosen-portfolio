@@ -5,16 +5,18 @@ import { Button } from "@/components/ui/button";
 
 const projects = [
   {
+    id: 1,
     title: "Customer Churn Prediction",
     description:
       "Built a machine learning model to predict customer churn with 92% accuracy using ensemble methods and feature engineering.",
     image:
       "https://images.unsplash.com/photo-1763568258143-904ea924ac53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWNoaW5lJTIwbGVhcm5pbmclMjBhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwY29kZXxlbnwxfHx8fDE3NzI0MTU4MzN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     tags: ["Machine Learning", "Python", "Scikit-learn"],
-    github: "#",
+    github: "https://github.com/Chosen-Data26/Customer-Churn-Prediction.git",
     demo: "#",
   },
   {
+    id: 2,
     title: "Sales Analytics Dashboard",
     description:
       "Developed an interactive Power BI dashboard for real-time sales tracking, resulting in 30% improvement in decision-making speed.",
@@ -25,6 +27,7 @@ const projects = [
     demo: "#",
   },
   {
+    id: 3,
     title: "Deep Learning Image Classifier",
     description:
       "Created a CNN-based image classification system achieving 95% accuracy on custom dataset using transfer learning techniques.",
@@ -35,6 +38,7 @@ const projects = [
     demo: "#",
   },
   {
+    id: 4,
     title: "Time Series Forecasting",
     description:
       "Implemented ARIMA and LSTM models for stock price prediction with comprehensive statistical analysis and visualization.",
@@ -84,7 +88,7 @@ export function ProjectsSection() {
         <div className="grid md:grid-cols-2 gap-8 max-w-7xl mx-auto">
           {projects.map((project, index) => (
             <motion.div
-              key={project.title}
+              key={project.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -101,7 +105,7 @@ export function ProjectsSection() {
                 <div className="absolute inset-0 bg-linear-to-t from-black via-black/50 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
 
                 {/* Hover Overlay */}
-                <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
                   <Button
                     size="sm"
                     className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border border-white/30"
@@ -150,21 +154,23 @@ export function ProjectsSection() {
         </div>
 
         {/* View More Projects Button */}
-        {/* <motion.div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center mt-12"
         >
-          <Button
-            size="lg"
-            className="bg-white/5 hover:bg-white/10 text-white border border-white/20 hover:border-[#00BFFF]/50 transition-all"
-          >
-            View All Projects
-            <ExternalLink className="w-4 h-4 ml-2" />
-          </Button>
-        </motion.div> */}
+          <a href="https://github.com/Chosen-Data26" target="_blank" rel="noopener noreferrer">
+            <Button
+              size="lg"
+              className="bg-white/5 hover:bg-white/10 text-white border border-white/20 hover:border-[#00BFFF]/50 transition-all cursor-pointer"
+            >
+              View All Projects
+              <ExternalLink className="w-4 h-4 ml-2" />
+            </Button>
+          </a>
+        </motion.div>
       </div>
     </section>
   );

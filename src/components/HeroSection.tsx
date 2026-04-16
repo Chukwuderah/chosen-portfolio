@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 
 export function HeroSection() {
   const scrollToSection = (id: string) => {
@@ -61,16 +61,16 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-6xl md:text-8xl font-bold text-white mb-4 tracking-tight"
+            className="text-4xl md:text-6xl font-semibold text-white mb-4 tracking-tight uppercase"
           >
-            PORTFOLIO
+            chosen okedinachi
           </motion.h1>
 
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="h-1 w-32 bg-linear-to-r from-[#00BFFF] to-[#A020F0] mx-auto mb-8"
+            className="h-1 w-64 bg-linear-to-r from-[#00BFFF] to-[#A020F0] mx-auto mb-8"
           />
 
           <motion.p

@@ -14,7 +14,7 @@ const skillCategories = [
       { name: "Python", level: 95 },
       { name: "R", level: 85 },
       { name: "SQL", level: 90 },
-      { name: "JavaScript", level: 75 },
+      // { name: "JavaScript", level: 75 },
     ],
   },
   {
@@ -22,9 +22,9 @@ const skillCategories = [
     icon: Brain,
     skills: [
       { name: "Scikit-learn", level: 92 },
-      { name: "TensorFlow", level: 88 },
-      { name: "PyTorch", level: 85 },
-      { name: "Keras", level: 90 },
+      { name: "TensorFlow", level: 8 },
+      { name: "PyTorch", level: 15 },
+      { name: "Keras", level: 5 },
     ],
   },
   {
@@ -41,8 +41,8 @@ const skillCategories = [
     title: "Cloud & Deployment",
     icon: Cloud,
     skills: [
-      { name: "AWS", level: 82 },
-      { name: "Docker", level: 80 },
+      // { name: "AWS", level: 82 },
+      // { name: "Docker", level: 80 },
       { name: "Streamlit", level: 88 },
       { name: "Git", level: 90 },
     ],
@@ -141,9 +141,9 @@ export function SkillsSection() {
           className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mt-16"
         >
           {[
-            { number: "50+", label: "Projects Completed" },
-            { number: "10+", label: "Tools Mastered" },
-            { number: "5+", label: "Years Experience" },
+            { number: "10+", label: "Projects Completed" },
+            { number: "12+", label: "Tools Mastered" },
+            { number: "2+", label: "Years Experience" },
           ].map((stat) => (
             <div
               key={stat.label}

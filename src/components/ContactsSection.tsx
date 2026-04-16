@@ -2,26 +2,25 @@ import { motion } from "framer-motion";
 import { Mail, Linkedin, Github, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 
 const socialLinks = [
   {
     name: "Email",
     icon: Mail,
-    href: "mailto:your.email@example.com",
+    href: "mailto:okedinachichosen@gmail.com",
     color: "#00BFFF",
   },
   {
     name: "LinkedIn",
     icon: Linkedin,
-    href: "https://linkedin.com/in/yourprofile",
+    href: "http://www.linkedin.com/in/chibundu-okedinachi",
     color: "#0077B5",
   },
   {
     name: "GitHub",
     icon: Github,
-    href: "https://github.com/yourprofile",
+    href: "https://github.com/Chosen-Data26",
     color: "#A020F0",
   },
 ];
@@ -86,7 +85,7 @@ export function ContactSection() {
           </p>
         </motion.div>
 
-        <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-12 items-start">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start justify-center">
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -141,7 +140,7 @@ export function ContactSection() {
                 >
                   Message
                 </label>
-                <Textarea
+                <textarea
                   id="message"
                   name="message"
                   value={formData.message}
@@ -149,14 +148,14 @@ export function ContactSection() {
                   placeholder="Tell me about your project..."
                   rows={6}
                   required
-                  className="bg-white/5 border-white/20 text-white placeholder:text-gray-500 focus:border-[#00BFFF] focus:ring-[#00BFFF] resize-none"
+                  className="w-full rounded-md px-3 py-2 bg-white/5 border border-white/20 text-white placeholder:text-gray-500 focus:border-[#00BFFF] focus:ring-[#00BFFF] resize-none"
                 />
               </div>
 
               <Button
                 type="submit"
                 size="lg"
-                className="w-full bg-linear-to-r from-[#00BFFF] to-[#A020F0] hover:from-[#00BFFF]/90 hover:to-[#A020F0]/90 text-white shadow-lg shadow-[#00BFFF]/20"
+                className="w-full bg-linear-to-r from-[#00BFFF] to-[#A020F0] hover:from-[#00BFFF]/90 hover:to-[#A020F0]/90 text-white shadow-lg shadow-[#00BFFF]/20 cursor-pointer"
               >
                 <Send className="w-5 h-5 mr-2" />
                 Send Message
@@ -203,7 +202,7 @@ export function ContactSection() {
                     </div>
                     <div>
                       <div className="text-white font-medium">{link.name}</div>
-                      <div className="text-gray-400 text-sm">
+                      <div className="hidden sm:block text-gray-400 text-sm">
                         {link.href
                           .replace("mailto:", "")
                           .replace("https://", "")}
@@ -213,21 +212,19 @@ export function ContactSection() {
                 ))}
               </div>
             </div>
-
-            {/* Optional: QR Code or Additional Info */}
-            <div className="bg-linear-to-br from-[#00BFFF]/10 to-[#A020F0]/10 rounded-2xl py-6 px-4 sm:px-6 border border-white/10">
-              <div className="flex items-center space-x-3 mb-2">
-                <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse" />
-                <span className="text-white font-medium">
-                  Available for new projects
-                </span>
-              </div>
-              <p className="text-base font-medium text-transparent bg-clip-text bg-linear-to-r from-[#00BFFF] to-[#A020F0]">
-                Currently accepting freelance and contract work. Let's build
-                something amazing together!
-              </p>
-            </div>
           </motion.div>
+        </div>
+        <div className="w-full md:max-w-xl mx-auto mt-8 bg-linear-to-br from-[#00BFFF]/10 to-[#A020F0]/10 rounded-2xl py-6 px-4 sm:px-6 border border-white/10">
+          <div className="flex items-center space-x-3 mb-2">
+            <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse" />
+            <span className="text-white font-medium">
+              Available for new projects
+            </span>
+          </div>
+          <p className="text-base font-medium text-transparent bg-clip-text bg-linear-to-r from-[#00BFFF] to-[#A020F0]">
+            Currently accepting freelance and contract work. Let's build
+            something amazing together!
+          </p>
         </div>
       </div>
     </section>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Linkedin, Mail, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navItems = [
@@ -10,6 +10,16 @@ const navItems = [
   { label: "Projects", href: "#projects" },
   // { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
+];
+
+const socialLinks = [
+  {
+    icon: Linkedin,
+    href: "http://www.linkedin.com/in/chibundu-okedinachi",
+    label: "LinkedIn",
+  },
+  { icon: Github, href: "https://github.com/Chosen-Data26", label: "GitHub" },
+  { icon: Mail, href: "mailto:okedinachichosen@gmail.com", label: "Email" },
 ];
 
 export function Navigation() {
@@ -40,6 +50,8 @@ export function Navigation() {
     setIsMobileMenuOpen(false);
   };
 
+  const currentYear = new Date().getFullYear();
+
   return (
     <>
       <motion.nav
@@ -63,8 +75,12 @@ export function Navigation() {
               }}
               whileHover={{ scale: 1.05 }}
             >
-              <code className="text-[#00BFFF] text-base font-medium">&lt; cho</code>
-              <code className="text-[#A020F0] text-base font-medium">sen /&gt;</code>
+              <code className="text-[#00BFFF] text-base font-medium">
+                &lt; cho
+              </code>
+              <code className="text-[#A020F0] text-base font-medium">
+                sen /&gt;
+              </code>
             </motion.a>
 
             {/* Desktop Navigation */}
@@ -105,9 +121,9 @@ export function Navigation() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           className="fixed inset-0 z-40 bg-black/95 backdrop-blur-xl md:hidden"
-          style={{ top: "40px" }}
+          // style={{ top: "40px" }}
         >
-          <div className="container mx-auto px-6 py-8">
+          <div className="container mx-auto px-6 pb-6 pt-20">
             <div className="flex flex-col items-center gap-4">
               {navItems.map((item, index) => (
                 <motion.button
@@ -116,13 +132,39 @@ export function Navigation() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-left text-xl text-white hover:text-[#00BFFF] py-3 px-4 rounded-lg hover:bg-white/5 transition-all"
+                  className="text-left text-xl text-white hover:text-[#00BFFF] py-2 px-4 rounded-lg hover:bg-white/5 transition-all"
                 >
                   {item.label}
                 </motion.button>
               ))}
             </div>
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.5, delay: 0.2 }}
+          >
+            {/* Social Links */}
+            <div className="w-full flex items-center justify-center gap-4">
+              {socialLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={link.label}
+                  className="p-3 rounded-lg bg-white/5 text-gray-400 hover:text-[#00BFFF] hover:bg-white/10 border border-white/10 hover:border-[#00BFFF]/50 transition-all duration-300"
+                >
+                  <link.icon className="w-5 h-5" />
+                </a>
+              ))}
+            </div>
+
+            <p className="text-gray-400 text-center text-sm my-4">
+              &copy; {currentYear} Chosen Okedinachi. All rights reserved.
+            </p>
+          </motion.div>
         </motion.div>
       )}
     </>

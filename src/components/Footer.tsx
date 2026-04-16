@@ -6,11 +6,11 @@ export function Footer() {
   const socialLinks = [
     {
       icon: Linkedin,
-      href: "https://linkedin.com/in/yourprofile",
+      href: "http://www.linkedin.com/in/chibundu-okedinachi",
       label: "LinkedIn",
     },
-    { icon: Github, href: "https://github.com/yourprofile", label: "GitHub" },
-    { icon: Mail, href: "mailto:your.email@example.com", label: "Email" },
+    { icon: Github, href: "https://github.com/Chosen-Data26", label: "GitHub" },
+    { icon: Mail, href: "mailto:okedinachichosen@gmail.com", label: "Email" },
   ];
 
   return (
