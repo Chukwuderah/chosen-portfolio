@@ -13,7 +13,7 @@ const projects = [
       "https://images.unsplash.com/photo-1763568258143-904ea924ac53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWNoaW5lJTIwbGVhcm5pbmclMjBhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwY29kZXxlbnwxfHx8fDE3NzI0MTU4MzN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     tags: ["Machine Learning", "Python", "Scikit-learn"],
     github: "https://github.com/Chosen-Data26/Customer-Churn-Prediction.git",
-    demo: "#",
+    demo: "https://customer-churn-prediction-vox.streamlit.app/",
   },
   {
     id: 2,
@@ -108,7 +108,7 @@ export function ProjectsSection() {
                 <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
                   <Button
                     size="sm"
-                    className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border border-white/30"
+                    className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border border-white/30 cursor-pointer"
                     onClick={() => window.open(project.github, "_blank")}
                   >
                     <Github className="w-4 h-4 mr-2" />
@@ -116,7 +116,7 @@ export function ProjectsSection() {
                   </Button>
                   <Button
                     size="sm"
-                    className="bg-linear-to-r from-[#00BFFF] to-[#A020F0] hover:from-[#00BFFF]/90 hover:to-[#A020F0]/90 text-white"
+                    className="bg-linear-to-r from-[#00BFFF] to-[#A020F0] hover:from-[#00BFFF]/90 hover:to-[#A020F0]/90 text-white cursor-pointer"
                     onClick={() => window.open(project.demo, "_blank")}
                   >
                     <ExternalLink className="w-4 h-4 mr-2" />

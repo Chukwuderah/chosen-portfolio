@@ -74,10 +74,10 @@ export function AboutSection() {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <h3 className="text-3xl font-bold text-white">
+            <h3 className="text-3xl font-bold text-white text-center md:text-left">
               Data Scientist & Machine Learning Enthusiast
             </h3>
-            <p className="text-gray-300 text-lg leading-relaxed">
+            <p className="text-gray-300 text-lg text-justify leading-relaxed">
               I&apos;m a data scientist focused on building predictive systems
               that help people make better decisions with data.
               <span className=" block mt-2">
@@ -90,7 +90,7 @@ export function AboutSection() {
                 applications.
               </span>
             </p>
-            <p className="text-gray-300 text-lg leading-relaxed">
+            <p className="text-gray-300 text-lg text-justify leading-relaxed">
               I work primarily with{" "}
               <strong>
                 Python, pandas, scikit-learn, and modern data tools
